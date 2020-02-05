@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+    echo "引数はコンパイル対象のファイルの名前のみ指定してください" 1>&2
+    exit 1
+fi
+
+nvcc -I/usr/lib/aarch64-linux-gnu/openmpi/include -L/usr/lib/aarch64-linux-gnu/openmpi/lib -lmpi $1.cu -o $1
