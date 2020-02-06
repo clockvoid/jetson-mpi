@@ -26,6 +26,20 @@ NFSに関しては初めて使ったので，以下のサイトを参照．
 
 [NFSによるファイルの共有](http://tanizawade.gozaru.jp/topic/common_disk.html)
 
+Ubuntuでは，以下のコマンドを用いてNFSをインストールする．
+
+ホスト側：
+
+```bash
+sudo apt install nfs-kernel-server
+```
+
+ゲスト側：
+
+```bash
+sudo apt install nfs-common
+```
+
 なお，`exports`ファイルには，以下のように書けば良い
 
 ```exports
